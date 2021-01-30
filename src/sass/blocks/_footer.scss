@@ -1,0 +1,50 @@
+.footer {
+    padding: 50px 0 32px;
+    background: $footer-color;
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        &-title {
+            margin-bottom: 20px;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 20px;
+            text-transform: uppercase;
+            color: $title-color;
+        }
+
+        &-link {
+            margin-bottom: 8px;
+            font-size: 14px;
+            line-height: 19px;
+        }
+
+        &:nth-child(1) {
+            padding-left: 180px;
+            width: 300px;
+        }
+
+        &:nth-child(2) {
+            width: 140px;
+        }
+
+        &:nth-child(3) {
+            width: 140px;
+        }
+
+        &:nth-child(4) {
+            width: 300px;
+        }
+    }
+
+    &__copy {
+        padding-top: 40px;
+        font-size: 14px;
+        line-height: 19px;
+        text-align: center;
+    }
+}

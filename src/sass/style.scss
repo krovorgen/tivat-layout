@@ -1,1 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 @import "libs/bootstrap-reboot.min";
+@import "libs/reset";
+@import "libs/slick.scss";
+@import "base/variables";
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: $text-color;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1200px;
+
+    &-content {
+        margin: 0 auto;
+        max-width: 970px;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+.section-line {
+    border-bottom: 1px solid rgba(#d0d4d8, 0.5);
+}
+
+@import "blocks/title";
+@import "blocks/header";
+@import "blocks/reason";
+@import "blocks/about";
+@import "blocks/photo";
+@import "blocks/footer";

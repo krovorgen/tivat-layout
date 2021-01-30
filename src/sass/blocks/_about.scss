@@ -1,0 +1,77 @@
+.about {
+    padding: 80px 0 0;
+
+    &__title {
+        margin-bottom: 13px;
+    }
+
+    &__descr {
+        margin-bottom: 72px;
+    }
+
+    &__item {
+        margin-bottom: 100px;
+        padding: 70px 0;
+        background-position: right;
+        background-repeat: no-repeat;
+
+        &:nth-child(even) {
+            background-position: left;
+        }
+
+        &:nth-child(even) .about__box {
+            margin-left: auto;
+        }
+
+        &:nth-child(even) .about__box::before {
+            left: auto;
+            right: 19px;
+            border-top: 2px solid $main-color;
+            border-right: 2px solid $main-color;
+            border-left: none;
+        }
+
+        &:nth-child(even) .about__box::after {
+            left: 19px;
+            border-right: none;
+            border-left: 2px solid $main-color;
+        }
+    }
+
+    &__box {
+        position: relative;
+        padding: 33px 40px;
+        max-width: 470px;
+        background-color: #fff;
+
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            width: 33px;
+            height: 33px;
+        }
+
+        &::before {
+            left: 19px;
+            top: 19px;
+            border-top: 2px solid $main-color;
+            border-left: 2px solid $main-color;
+        }
+
+        &::after {
+            right: 19px;
+            bottom: 19px;
+            border-right: 2px solid $main-color;
+            border-bottom: 2px solid $main-color;
+        }
+
+        &-title {
+            margin-bottom: 20px;
+            font-family: Georgia;
+            font-size: 24px;
+            line-height: 25px;
+            color: $title-color;
+        }
+    }
+}
