@@ -74,4 +74,96 @@
             color: $title-color;
         }
     }
+
+    &__preview {
+        &-title {
+            margin-bottom: 38px;
+        }
+
+        &-descr {
+            margin: 0 auto 80px;
+        }
+    }
+
+    &__images {
+        &-box {
+            position: relative;
+
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &__dot {
+        position: absolute;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        background-color: rgba($main-color, 0.75);
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 15px;
+            top: -105px;
+            display: none;
+            width: 244px;
+            height: 122px;
+            background-image: url("../img/lines/3.svg");
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            background-color: $color-dot;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+        }
+
+        &-descr {
+            position: absolute;
+            left: 167px;
+            top: -133px;
+            display: none;
+            font-weight: 700;
+            font-size: 14px;
+            white-space: nowrap;
+            color: $text-color;
+        }
+
+        &:hover::before {
+            display: block;
+        }
+
+        &:hover &-descr {
+            display: block;
+        }
+
+        &--1 {
+            right: 700px;
+            top: 128px;
+        }
+
+        &--2 {
+            right: 500px;
+            top: 128px;
+        }
+
+        &--3 {
+            right: 264px;
+            top: 128px;
+        }
+    }
+}
+
+.correct {
+    left: 182px;
+    top: -133px;
 }

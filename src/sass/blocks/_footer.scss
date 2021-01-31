@@ -21,6 +21,43 @@
             margin-bottom: 8px;
             font-size: 14px;
             line-height: 19px;
+
+            &--social {
+                position: relative;
+                padding-left: 28px;
+            }
+
+            &--social::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                width: 16px;
+                height: 16px;
+            }
+
+            &--message::before {
+                top: 1px;
+                width: 17px;
+                background-image: url("../img/contacts-1.svg");
+            }
+
+            &--facebook::before {
+                background-image: url("../img/contacts-2.svg");
+            }
+
+            &--instagram::before {
+                background-image: url("../img/contacts-3.svg");
+            }
+
+            &--youtube::before {
+                background-image: url("../img/contacts-4.svg");
+            }
+
+            &--email::before {
+                top: 2px;
+                height: 13px;
+                background-image: url("../img/contacts-5.svg");
+            }
         }
 
         &:nth-child(1) {
