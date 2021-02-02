@@ -33,6 +33,8 @@ gulp.task('watch', () => {
     gulp.watch('src/*.html').on('change', gulp.parallel('html'))
     gulp.watch('src/js/**/*.js').on('change', gulp.parallel('scripts'))
     gulp.watch('src/fonts/**/*').on('all', gulp.parallel('fonts'))
+    gulp.watch('src/fonts/**/*').on('all', gulp.parallel('mailer'))
+    gulp.watch('src/fonts/**/*').on('all', gulp.parallel('pages'))
     gulp.watch('src/icons/**/*').on('all', gulp.parallel('icons'))
     gulp.watch('src/img/**/*').on('all', gulp.parallel('images'))
 })
@@ -55,6 +57,20 @@ gulp.task('fonts', () => {
     return gulp
         .src('src/fonts/**/*')
         .pipe(gulp.dest('dist/fonts'))
+        .pipe(browserSync.stream())
+})
+
+gulp.task('mailer', () => {
+    return gulp
+        .src('src/mailer/**/*')
+        .pipe(gulp.dest('dist/mailer'))
+        .pipe(browserSync.stream())
+})
+
+gulp.task('pages', () => {
+    return gulp
+        .src('src/pages/**/*')
+        .pipe(gulp.dest('dist/pages'))
         .pipe(browserSync.stream())
 })
 
@@ -83,6 +99,8 @@ gulp.task(
         'fonts',
         'icons',
         'html',
-        'images'
+        'images',
+        'mailer',
+        'pages'
     )
 )
