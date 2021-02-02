@@ -54,6 +54,10 @@
 .menu {
     border-bottom: 1px solid rgba(#d0d4d8, 0.5);
 
+    &__btn {
+        display: none;
+    }
+
     &__list {
         display: flex;
         align-items: center;

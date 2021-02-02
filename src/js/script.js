@@ -5,5 +5,9 @@ $(function() {
         prevArrow: '<button type="button" class="slick-prev"><img src="img/left-arrow.svg" alt=""></button>',
         nextArrow: '<button type="button" class="slick-next"><img src="img/right-arrow.svg" alt=""></button>',
     });
+    $('.menu__btn').on('click', function(){
+        $('.menu__list').slideToggle();
+    });
+
 })
 /* eslint-enable */

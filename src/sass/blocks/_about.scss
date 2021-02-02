@@ -92,6 +92,7 @@
             img {
                 display: block;
                 margin: 0 auto;
+                max-width: 100%;
             }
         }
     }
@@ -102,6 +103,7 @@
         width: 32px;
         height: 32px;
         background-color: rgba($main-color, 0.75);
+        transition: 0.5s all;
 
         &::before {
             content: "";
@@ -138,12 +140,18 @@
             color: $text-color;
         }
 
+        &:hover {
+            transition: 0.5s all;
+        }
+
         &:hover::before {
             display: block;
+            transition: 0.5s all;
         }
 
         &:hover &-descr {
             display: block;
+            transition: 0.5s all;
         }
 
         &--1 {
