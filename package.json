@@ -7,12 +7,14 @@
         "slint": "stylelint \"**/*.scss\"",
         "slint:fix": "stylelint \"**/*.scss\" --fix",
         "lint": "prettier --check . && eslint .",
-        "lint:fix": "prettier --write . && eslint . --fix"
+        "lint:fix": "prettier --write . && eslint . --fix",
+        "deploy": "gh-pages -d dist"
     },
     "author": "",
     "license": "ISC",
     "devDependencies": {
         "browser-sync": "^2.26.13",
+        "gh-pages": "^3.2.2",
         "gulp": "^4.0.2",
         "gulp-autoprefixer": "^6.1.0",
         "gulp-clean-css": "^4.3.0",
